@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfIntegration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfIntegration"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="1,0,-1,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="GO Cator device id" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ChangeExposure1Btn" Content="Set Exposure 1" HorizontalAlignment="Left" Margin="373,77,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.5,0.5" Click="ChangeExposure1Btn_Click"/>
+        <TextBox x:Name="Exposure1Txt" TextAlignment="Right" HorizontalAlignment="Left" Margin="524,79,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="StartBtn" Content="Start" HorizontalAlignment="Left" Margin="374,12,0,0" VerticalAlignment="Top" Width="84" Height="41" Click="StartBtn_Click"/>
+        <Button x:Name="StopBtn" Content="Stop" HorizontalAlignment="Left" Margin="482,12,0,0" VerticalAlignment="Top" Width="84" Height="41" Click="StopBtn_Click"/>
+        <ListBox x:Name="DeviceSerialList" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="10,41,658,231" SelectionChanged="DeviceSerialList_SelectionChanged" MouseDown="DeviceSerialList_MouseDown"/>
+        <Button x:Name="DeviceSerialUpdateBtn" Content="Search Device" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="84" Height="41" RenderTransformOrigin="-2.034,2.189" Click="DeviceSerialUpdateBtn_Click"/>
+        <ListBox x:Name="JobList" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="175,41,493,231"/>
+        <Button x:Name="JobListBtn" Content="Search Device" HorizontalAlignment="Left" Margin="175,217,0,176" Width="84" RenderTransformOrigin="-2.034,2.189" Click="JobListBtn_Click"/>
+    </Grid>
+</Window>
